@@ -1,0 +1,40 @@
+name: Rotate homepage discovery
+
+# Rebuilds the one-contractor-per-state homepage sample each week and pushes
+# to master so the static Vercel production deploy actually rotates.
+on:
+  schedule:
+    # Mondays at 15:15 UTC
+    - cron: '15 15 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rotate-homepage-discovery
+  cancel-in-progress: false
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rotate discovery sample
+        run: node scripts/rotate-homepage-discovery.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- lib/data/homepage-discovery.json; then
+            echo "No discovery snapshot changes for this week."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/data/homepage-discovery.json
+          git commit -m "Rotate homepage discovery sample (week $(node -e "console.log(Math.floor(Date.now()/(7*24*60*60*1000)))"))."
+          git push origin HEAD:master

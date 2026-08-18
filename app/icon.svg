@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="#131210"/>
+  <!-- G -->
+  <path fill="#F7F6F2" d="M15.9 7.2c-4.85 0-8.55 3.55-8.55 8.8s3.7 8.8 8.55 8.8c3.35 0 6.05-1.55 7.35-4.2l-2.55-1.45c-.85 1.7-2.55 2.7-4.8 2.7-3.05 0-5.2-2.25-5.2-5.85s2.15-5.85 5.2-5.85c2.1 0 3.7.9 4.55 2.4l2.55-1.5C21.7 8.6 19.1 7.2 15.9 7.2Z"/>
+  <!-- stylized i: dot, stem, yellow base -->
+  <rect x="22.15" y="7.35" width="3.35" height="3.35" rx="0.55" fill="#F7F6F2"/>
+  <rect x="22.15" y="12.1" width="3.35" height="7.6" rx="0.55" fill="#F7F6F2"/>
+  <rect x="22.15" y="21.1" width="3.35" height="3.35" rx="0.55" fill="#FFC61A"/>
+</svg>

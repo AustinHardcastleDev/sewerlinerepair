@@ -1,0 +1,145 @@
+[
+  {
+    "id": "gmp-tos",
+    "title": "Google Maps Platform Terms of Service",
+    "publisher": "Google",
+    "url": "https://cloud.google.com/maps-platform/terms",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "data-rights"
+    ],
+    "refreshCadence": "quarterly"
+  },
+  {
+    "id": "gmp-sst",
+    "title": "Google Maps Platform Service Specific Terms",
+    "publisher": "Google",
+    "url": "https://cloud.google.com/maps-platform/terms/maps-service-terms",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "data-rights",
+      "coordinates"
+    ],
+    "refreshCadence": "quarterly"
+  },
+  {
+    "id": "places-policies",
+    "title": "Policies and attributions for Places API",
+    "publisher": "Google",
+    "url": "https://developers.google.com/maps/documentation/places/web-service/policies",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "data-rights",
+      "reviews"
+    ],
+    "refreshCadence": "quarterly"
+  },
+  {
+    "id": "ugc-policy",
+    "title": "Maps User Generated Content Policy",
+    "publisher": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "reviews"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "apify-gmaps",
+    "title": "Google Maps Scraper (compass/crawler-google-places)",
+    "publisher": "Apify/Compass",
+    "url": "https://apify.com/compass/crawler-google-places",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "data-rights",
+      "discovery"
+    ],
+    "refreshCadence": "quarterly"
+  },
+  {
+    "id": "call-811",
+    "title": "Call 811",
+    "publisher": "Common Ground Alliance",
+    "url": "https://call811.com/",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "permits",
+      "excavation"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "osha-excavations",
+    "title": "OSHA Excavations",
+    "publisher": "OSHA",
+    "url": "https://www.osha.gov/excavations",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "safety",
+      "excavation"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "nastt",
+    "title": "NASTT",
+    "publisher": "NASTT",
+    "url": "https://nastt.org/",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "methods",
+      "trenchless"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "nassco",
+    "title": "NASSCO",
+    "publisher": "NASSCO",
+    "url": "https://www.nassco.org/",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "assessment",
+      "credentials"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "census-acs",
+    "title": "American Community Survey",
+    "publisher": "U.S. Census Bureau",
+    "url": "https://www.census.gov/programs-surveys/acs",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "housing",
+      "state-variation"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "census-geocoder",
+    "title": "Census Geocoder",
+    "publisher": "U.S. Census Bureau",
+    "url": "https://geocoding.geo.census.gov/geocoder/",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "coordinates",
+      "data-rights"
+    ],
+    "refreshCadence": "annual"
+  },
+  {
+    "id": "seattle-side-sewer-permit",
+    "title": "Side Sewer Permit",
+    "publisher": "Seattle Department of Construction and Inspections",
+    "url": "https://www.seattle.gov/sdci/permits/permits-we-issue-(a-z)/side-sewer-permit",
+    "retrievedAt": "2026-08-12",
+    "appliesTo": [
+      "lateral-ownership",
+      "permits",
+      "restoration"
+    ],
+    "refreshCadence": "annual"
+  }
+]

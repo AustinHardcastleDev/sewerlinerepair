@@ -1,0 +1,933 @@
+{
+  "al": {
+    "name": "Alabama",
+    "abbr": "AL",
+    "slug": "al",
+    "totalListings": 126,
+    "explicitCount": 79,
+    "highCount": 27,
+    "mediumCount": 20,
+    "topCities": [
+      "Huntsville",
+      "Birmingham",
+      "Mobile",
+      "Decatur",
+      "Tuscaloosa",
+      "Gardendale",
+      "Hoover",
+      "Alabaster"
+    ]
+  },
+  "ak": {
+    "name": "Alaska",
+    "abbr": "AK",
+    "slug": "ak",
+    "totalListings": 15,
+    "explicitCount": 8,
+    "highCount": 2,
+    "mediumCount": 5,
+    "topCities": [
+      "Anchorage",
+      "Wasilla",
+      "Fairbanks",
+      "Kenai"
+    ]
+  },
+  "az": {
+    "name": "Arizona",
+    "abbr": "AZ",
+    "slug": "az",
+    "totalListings": 378,
+    "explicitCount": 236,
+    "highCount": 86,
+    "mediumCount": 56,
+    "topCities": [
+      "Phoenix",
+      "Mesa",
+      "Tucson",
+      "Gilbert",
+      "Chandler",
+      "Scottsdale",
+      "Tempe",
+      "Peoria"
+    ]
+  },
+  "ar": {
+    "name": "Arkansas",
+    "abbr": "AR",
+    "slug": "ar",
+    "totalListings": 63,
+    "explicitCount": 31,
+    "highCount": 17,
+    "mediumCount": 15,
+    "topCities": [
+      "North Little Rock",
+      "Springdale",
+      "Little Rock",
+      "Hot Springs",
+      "Texarkana",
+      "Jonesboro",
+      "Fort Smith",
+      "Fayetteville"
+    ]
+  },
+  "ca": {
+    "name": "California",
+    "abbr": "CA",
+    "slug": "ca",
+    "totalListings": 1207,
+    "explicitCount": 813,
+    "highCount": 262,
+    "mediumCount": 132,
+    "topCities": [
+      "San Jose",
+      "Los Angeles",
+      "San Diego",
+      "Riverside",
+      "Anaheim",
+      "San Francisco",
+      "Bakersfield",
+      "Murrieta"
+    ]
+  },
+  "co": {
+    "name": "Colorado",
+    "abbr": "CO",
+    "slug": "co",
+    "totalListings": 368,
+    "explicitCount": 230,
+    "highCount": 86,
+    "mediumCount": 52,
+    "topCities": [
+      "Denver",
+      "Colorado Springs",
+      "Loveland",
+      "Littleton",
+      "Aurora",
+      "Fort Collins",
+      "Englewood",
+      "Boulder"
+    ]
+  },
+  "ct": {
+    "name": "Connecticut",
+    "abbr": "CT",
+    "slug": "ct",
+    "totalListings": 98,
+    "explicitCount": 62,
+    "highCount": 17,
+    "mediumCount": 19,
+    "topCities": [
+      "Newington",
+      "Stamford",
+      "Meriden",
+      "West Hartford",
+      "Waterbury",
+      "Bridgeport",
+      "Danbury",
+      "Mystic"
+    ]
+  },
+  "de": {
+    "name": "Delaware",
+    "abbr": "DE",
+    "slug": "de",
+    "totalListings": 28,
+    "explicitCount": 20,
+    "highCount": 6,
+    "mediumCount": 2,
+    "topCities": [
+      "Wilmington",
+      "Newark",
+      "Dover",
+      "New Castle",
+      "Milford",
+      "Delaware City",
+      "Townsend",
+      "Magnolia"
+    ]
+  },
+  "fl": {
+    "name": "Florida",
+    "abbr": "FL",
+    "slug": "fl",
+    "totalListings": 646,
+    "explicitCount": 377,
+    "highCount": 168,
+    "mediumCount": 101,
+    "topCities": [
+      "Tampa",
+      "Miami",
+      "Jacksonville",
+      "Fort Myers",
+      "Orlando",
+      "Sarasota",
+      "Pompano Beach",
+      "Fort Lauderdale"
+    ]
+  },
+  "ga": {
+    "name": "Georgia",
+    "abbr": "GA",
+    "slug": "ga",
+    "totalListings": 340,
+    "explicitCount": 199,
+    "highCount": 80,
+    "mediumCount": 61,
+    "topCities": [
+      "Marietta",
+      "Atlanta",
+      "Gainesville",
+      "Woodstock",
+      "Alpharetta",
+      "Acworth",
+      "Savannah",
+      "Lawrenceville"
+    ]
+  },
+  "hi": {
+    "name": "Hawaii",
+    "abbr": "HI",
+    "slug": "hi",
+    "totalListings": 36,
+    "explicitCount": 20,
+    "highCount": 13,
+    "mediumCount": 3,
+    "topCities": [
+      "Honolulu",
+      "Kahului",
+      "Aiea",
+      "Kailua-Kona",
+      "Makawao",
+      "Lihue",
+      "Kailua",
+      "Wailuku"
+    ]
+  },
+  "id": {
+    "name": "Idaho",
+    "abbr": "ID",
+    "slug": "id",
+    "totalListings": 107,
+    "explicitCount": 68,
+    "highCount": 14,
+    "mediumCount": 25,
+    "topCities": [
+      "Boise",
+      "Nampa",
+      "Caldwell",
+      "Meridian",
+      "Post Falls",
+      "Idaho Falls",
+      "Garden City",
+      "Twin Falls"
+    ]
+  },
+  "il": {
+    "name": "Illinois",
+    "abbr": "IL",
+    "slug": "il",
+    "totalListings": 362,
+    "explicitCount": 252,
+    "highCount": 60,
+    "mediumCount": 50,
+    "topCities": [
+      "Chicago",
+      "Plainfield",
+      "Springfield",
+      "Skokie",
+      "Decatur",
+      "Evanston",
+      "Arlington Heights",
+      "Naperville"
+    ]
+  },
+  "in": {
+    "name": "Indiana",
+    "abbr": "IN",
+    "slug": "in",
+    "totalListings": 219,
+    "explicitCount": 135,
+    "highCount": 49,
+    "mediumCount": 35,
+    "topCities": [
+      "Indianapolis",
+      "Greenwood",
+      "Fort Wayne",
+      "Fishers",
+      "Bloomington",
+      "Evansville",
+      "Muncie",
+      "Valparaiso"
+    ]
+  },
+  "ia": {
+    "name": "Iowa",
+    "abbr": "IA",
+    "slug": "ia",
+    "totalListings": 55,
+    "explicitCount": 33,
+    "highCount": 15,
+    "mediumCount": 7,
+    "topCities": [
+      "Des Moines",
+      "Council Bluffs",
+      "Ames",
+      "Clive",
+      "Grimes",
+      "Dallas Center",
+      "Cedar Rapids",
+      "Clinton"
+    ]
+  },
+  "ks": {
+    "name": "Kansas",
+    "abbr": "KS",
+    "slug": "ks",
+    "totalListings": 120,
+    "explicitCount": 76,
+    "highCount": 23,
+    "mediumCount": 21,
+    "topCities": [
+      "Wichita",
+      "Topeka",
+      "Olathe",
+      "Hutchinson",
+      "Lawrence",
+      "Kansas City",
+      "Overland Park",
+      "Lenexa"
+    ]
+  },
+  "ky": {
+    "name": "Kentucky",
+    "abbr": "KY",
+    "slug": "ky",
+    "totalListings": 98,
+    "explicitCount": 53,
+    "highCount": 31,
+    "mediumCount": 14,
+    "topCities": [
+      "Louisville",
+      "Lexington",
+      "Frankfort",
+      "Elizabethtown",
+      "Owensboro",
+      "Covington",
+      "Paducah",
+      "Shepherdsville"
+    ]
+  },
+  "la": {
+    "name": "Louisiana",
+    "abbr": "LA",
+    "slug": "la",
+    "totalListings": 90,
+    "explicitCount": 56,
+    "highCount": 17,
+    "mediumCount": 17,
+    "topCities": [
+      "Baton Rouge",
+      "Shreveport",
+      "Lafayette",
+      "New Orleans",
+      "Kenner",
+      "Metairie",
+      "Monroe",
+      "Youngsville"
+    ]
+  },
+  "me": {
+    "name": "Maine",
+    "abbr": "ME",
+    "slug": "me",
+    "totalListings": 17,
+    "explicitCount": 14,
+    "highCount": 0,
+    "mediumCount": 3,
+    "topCities": [
+      "Fairfield",
+      "Fryeburg",
+      "Naples",
+      "Brewer",
+      "Eliot",
+      "Readfield",
+      "Livermore",
+      "South Portland"
+    ]
+  },
+  "md": {
+    "name": "Maryland",
+    "abbr": "MD",
+    "slug": "md",
+    "totalListings": 205,
+    "explicitCount": 100,
+    "highCount": 52,
+    "mediumCount": 53,
+    "topCities": [
+      "Baltimore",
+      "Frederick",
+      "Annapolis",
+      "Pasadena",
+      "Silver Spring",
+      "Hagerstown",
+      "Gaithersburg",
+      "Rockville"
+    ]
+  },
+  "ma": {
+    "name": "Massachusetts",
+    "abbr": "MA",
+    "slug": "ma",
+    "totalListings": 151,
+    "explicitCount": 80,
+    "highCount": 37,
+    "mediumCount": 34,
+    "topCities": [
+      "Holliston",
+      "Quincy",
+      "Burlington",
+      "North Andover",
+      "Worcester",
+      "Pittsfield",
+      "Peabody",
+      "Woburn"
+    ]
+  },
+  "mi": {
+    "name": "Michigan",
+    "abbr": "MI",
+    "slug": "mi",
+    "totalListings": 202,
+    "explicitCount": 125,
+    "highCount": 41,
+    "mediumCount": 36,
+    "topCities": [
+      "Grand Rapids",
+      "Detroit",
+      "Kalamazoo",
+      "Fraser",
+      "Livonia",
+      "Troy",
+      "Ann Arbor",
+      "Rochester Hills"
+    ]
+  },
+  "mn": {
+    "name": "Minnesota",
+    "abbr": "MN",
+    "slug": "mn",
+    "totalListings": 128,
+    "explicitCount": 91,
+    "highCount": 20,
+    "mediumCount": 17,
+    "topCities": [
+      "Minneapolis",
+      "St Paul",
+      "Duluth",
+      "Maple Grove",
+      "Monticello",
+      "Big Lake",
+      "Little Canada",
+      "Baxter"
+    ]
+  },
+  "ms": {
+    "name": "Mississippi",
+    "abbr": "MS",
+    "slug": "ms",
+    "totalListings": 29,
+    "explicitCount": 10,
+    "highCount": 6,
+    "mediumCount": 13,
+    "topCities": [
+      "Ridgeland",
+      "Tupelo",
+      "Southaven",
+      "Pontotoc",
+      "New Albany",
+      "Pass Christian",
+      "Flowood",
+      "Meadville"
+    ]
+  },
+  "mo": {
+    "name": "Missouri",
+    "abbr": "MO",
+    "slug": "mo",
+    "totalListings": 211,
+    "explicitCount": 141,
+    "highCount": 35,
+    "mediumCount": 35,
+    "topCities": [
+      "St. Louis",
+      "Kansas City",
+      "Springfield",
+      "Lee's Summit",
+      "Independence",
+      "Columbia",
+      "Jefferson City",
+      "Chesterfield"
+    ]
+  },
+  "mt": {
+    "name": "Montana",
+    "abbr": "MT",
+    "slug": "mt",
+    "totalListings": 33,
+    "explicitCount": 21,
+    "highCount": 4,
+    "mediumCount": 8,
+    "topCities": [
+      "Great Falls",
+      "Columbia Falls",
+      "Billings",
+      "Kalispell",
+      "Missoula",
+      "Belgrade",
+      "Helena",
+      "Hays"
+    ]
+  },
+  "ne": {
+    "name": "Nebraska",
+    "abbr": "NE",
+    "slug": "ne",
+    "totalListings": 54,
+    "explicitCount": 28,
+    "highCount": 14,
+    "mediumCount": 12,
+    "topCities": [
+      "Omaha",
+      "Lincoln",
+      "Kearney",
+      "Elkhorn",
+      "Hastings",
+      "Gretna",
+      "Bellevue",
+      "Papillion"
+    ]
+  },
+  "nv": {
+    "name": "Nevada",
+    "abbr": "NV",
+    "slug": "nv",
+    "totalListings": 116,
+    "explicitCount": 75,
+    "highCount": 27,
+    "mediumCount": 14,
+    "topCities": [
+      "Las Vegas",
+      "Sparks",
+      "Henderson",
+      "Reno",
+      "Carson City",
+      "North Las Vegas",
+      "Mesquite",
+      "Sun Valley"
+    ]
+  },
+  "nh": {
+    "name": "New Hampshire",
+    "abbr": "NH",
+    "slug": "nh",
+    "totalListings": 42,
+    "explicitCount": 26,
+    "highCount": 9,
+    "mediumCount": 7,
+    "topCities": [
+      "Dover",
+      "Nashua",
+      "Bow",
+      "Manchester",
+      "Hudson",
+      "Hooksett",
+      "Concord",
+      "Portsmouth"
+    ]
+  },
+  "nj": {
+    "name": "New Jersey",
+    "abbr": "NJ",
+    "slug": "nj",
+    "totalListings": 308,
+    "explicitCount": 187,
+    "highCount": 62,
+    "mediumCount": 59,
+    "topCities": [
+      "Cherry Hill Township",
+      "Old Bridge",
+      "Sewell",
+      "Clifton",
+      "Freehold",
+      "Chatham",
+      "Edison",
+      "Mt Laurel Township"
+    ]
+  },
+  "nm": {
+    "name": "New Mexico",
+    "abbr": "NM",
+    "slug": "nm",
+    "totalListings": 57,
+    "explicitCount": 30,
+    "highCount": 10,
+    "mediumCount": 17,
+    "topCities": [
+      "Albuquerque",
+      "Santa Fe",
+      "Hobbs",
+      "Gallup",
+      "Farmington",
+      "Clovis",
+      "Carlsbad",
+      "Las Cruces"
+    ]
+  },
+  "ny": {
+    "name": "New York",
+    "abbr": "NY",
+    "slug": "ny",
+    "totalListings": 97,
+    "explicitCount": 46,
+    "highCount": 20,
+    "mediumCount": 31,
+    "topCities": [
+      "Brooklyn",
+      "Bronx",
+      "New York",
+      "Staten Island",
+      "Astoria",
+      "Long Island City",
+      "Richmond Hill",
+      "Ozone Park"
+    ]
+  },
+  "nc": {
+    "name": "North Carolina",
+    "abbr": "NC",
+    "slug": "nc",
+    "totalListings": 284,
+    "explicitCount": 165,
+    "highCount": 58,
+    "mediumCount": 61,
+    "topCities": [
+      "Charlotte",
+      "Raleigh",
+      "Greensboro",
+      "Durham",
+      "Wilmington",
+      "Concord",
+      "Clayton",
+      "Cary"
+    ]
+  },
+  "nd": {
+    "name": "North Dakota",
+    "abbr": "ND",
+    "slug": "nd",
+    "totalListings": 17,
+    "explicitCount": 10,
+    "highCount": 4,
+    "mediumCount": 3,
+    "topCities": [
+      "Fargo",
+      "West Fargo",
+      "Mapleton",
+      "Grand Forks",
+      "Bismarck",
+      "Wahpeton",
+      "Jamestown"
+    ]
+  },
+  "oh": {
+    "name": "Ohio",
+    "abbr": "OH",
+    "slug": "oh",
+    "totalListings": 383,
+    "explicitCount": 255,
+    "highCount": 66,
+    "mediumCount": 62,
+    "topCities": [
+      "Columbus",
+      "Cincinnati",
+      "Dayton",
+      "Akron",
+      "Cleveland",
+      "Lancaster",
+      "Toledo",
+      "Eastlake"
+    ]
+  },
+  "ok": {
+    "name": "Oklahoma",
+    "abbr": "OK",
+    "slug": "ok",
+    "totalListings": 171,
+    "explicitCount": 89,
+    "highCount": 50,
+    "mediumCount": 32,
+    "topCities": [
+      "Oklahoma City",
+      "Edmond",
+      "Tulsa",
+      "Broken Arrow",
+      "Yukon",
+      "Norman",
+      "Moore",
+      "Lawton"
+    ]
+  },
+  "or": {
+    "name": "Oregon",
+    "abbr": "OR",
+    "slug": "or",
+    "totalListings": 149,
+    "explicitCount": 85,
+    "highCount": 30,
+    "mediumCount": 34,
+    "topCities": [
+      "Portland",
+      "Eugene",
+      "Salem",
+      "Bend",
+      "Beaverton",
+      "Tualatin",
+      "Milwaukie",
+      "Hillsboro"
+    ]
+  },
+  "pa": {
+    "name": "Pennsylvania",
+    "abbr": "PA",
+    "slug": "pa",
+    "totalListings": 401,
+    "explicitCount": 246,
+    "highCount": 92,
+    "mediumCount": 63,
+    "topCities": [
+      "Pittsburgh",
+      "Philadelphia",
+      "Allentown",
+      "Lancaster",
+      "West Chester",
+      "Harrisburg",
+      "Mechanicsburg",
+      "Reading"
+    ]
+  },
+  "ri": {
+    "name": "Rhode Island",
+    "abbr": "RI",
+    "slug": "ri",
+    "totalListings": 19,
+    "explicitCount": 12,
+    "highCount": 4,
+    "mediumCount": 3,
+    "topCities": [
+      "Providence",
+      "Cranston",
+      "East Providence",
+      "Foster",
+      "Newport",
+      "Warwick",
+      "West Warwick",
+      "Johnston"
+    ]
+  },
+  "sc": {
+    "name": "South Carolina",
+    "abbr": "SC",
+    "slug": "sc",
+    "totalListings": 159,
+    "explicitCount": 108,
+    "highCount": 26,
+    "mediumCount": 25,
+    "topCities": [
+      "Greenville",
+      "Charleston",
+      "Rock Hill",
+      "Fort Mill",
+      "Lexington",
+      "Greenwood",
+      "North Charleston",
+      "Aiken"
+    ]
+  },
+  "sd": {
+    "name": "South Dakota",
+    "abbr": "SD",
+    "slug": "sd",
+    "totalListings": 20,
+    "explicitCount": 13,
+    "highCount": 4,
+    "mediumCount": 3,
+    "topCities": [
+      "Sioux Falls",
+      "Watertown",
+      "Rapid City",
+      "Hartford",
+      "Spencer",
+      "Tea",
+      "Mitchell",
+      "Brandon"
+    ]
+  },
+  "tn": {
+    "name": "Tennessee",
+    "abbr": "TN",
+    "slug": "tn",
+    "totalListings": 174,
+    "explicitCount": 95,
+    "highCount": 49,
+    "mediumCount": 30,
+    "topCities": [
+      "Knoxville",
+      "Memphis",
+      "Nashville",
+      "Chattanooga",
+      "Murfreesboro",
+      "Maryville",
+      "Cookeville",
+      "Oak Ridge"
+    ]
+  },
+  "tx": {
+    "name": "Texas",
+    "abbr": "TX",
+    "slug": "tx",
+    "totalListings": 823,
+    "explicitCount": 496,
+    "highCount": 200,
+    "mediumCount": 127,
+    "topCities": [
+      "Houston",
+      "Austin",
+      "San Antonio",
+      "Fort Worth",
+      "Dallas",
+      "Arlington",
+      "Tyler",
+      "Spring"
+    ]
+  },
+  "ut": {
+    "name": "Utah",
+    "abbr": "UT",
+    "slug": "ut",
+    "totalListings": 231,
+    "explicitCount": 163,
+    "highCount": 39,
+    "mediumCount": 29,
+    "topCities": [
+      "Salt Lake City",
+      "West Jordan",
+      "Sandy",
+      "Orem",
+      "Lehi",
+      "Provo",
+      "Ogden",
+      "Murray"
+    ]
+  },
+  "vt": {
+    "name": "Vermont",
+    "abbr": "VT",
+    "slug": "vt",
+    "totalListings": 2,
+    "explicitCount": 2,
+    "highCount": 0,
+    "mediumCount": 0,
+    "topCities": [
+      "South Royalton"
+    ]
+  },
+  "va": {
+    "name": "Virginia",
+    "abbr": "VA",
+    "slug": "va",
+    "totalListings": 242,
+    "explicitCount": 143,
+    "highCount": 65,
+    "mediumCount": 34,
+    "topCities": [
+      "Alexandria",
+      "Woodbridge",
+      "Fredericksburg",
+      "Richmond",
+      "Manassas",
+      "Midlothian",
+      "Chesapeake",
+      "Virginia Beach"
+    ]
+  },
+  "wa": {
+    "name": "Washington",
+    "abbr": "WA",
+    "slug": "wa",
+    "totalListings": 7,
+    "explicitCount": 2,
+    "highCount": 4,
+    "mediumCount": 1,
+    "topCities": [
+      "Washington"
+    ]
+  },
+  "wv": {
+    "name": "West Virginia",
+    "abbr": "WV",
+    "slug": "wv",
+    "totalListings": 21,
+    "explicitCount": 7,
+    "highCount": 7,
+    "mediumCount": 7,
+    "topCities": [
+      "South Charleston",
+      "Kearneysville",
+      "Weirton",
+      "Charleston",
+      "Morgantown",
+      "Bridgeport",
+      "Fairmont",
+      "Huntington"
+    ]
+  },
+  "wi": {
+    "name": "Wisconsin",
+    "abbr": "WI",
+    "slug": "wi",
+    "totalListings": 82,
+    "explicitCount": 57,
+    "highCount": 10,
+    "mediumCount": 15,
+    "topCities": [
+      "Milwaukee",
+      "Madison",
+      "Pewaukee",
+      "Appleton",
+      "Brookfield",
+      "Waupaca",
+      "Lake Mills",
+      "Menomonee Falls"
+    ]
+  },
+  "wy": {
+    "name": "Wyoming",
+    "abbr": "WY",
+    "slug": "wy",
+    "totalListings": 28,
+    "explicitCount": 13,
+    "highCount": 5,
+    "mediumCount": 10,
+    "topCities": [
+      "Rock Springs",
+      "Cheyenne",
+      "Jackson",
+      "Sheridan",
+      "Casper",
+      "Mills",
+      "Laramie",
+      "Torrington"
+    ]
+  }
+}

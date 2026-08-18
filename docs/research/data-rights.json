@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "reviewedAt": "2026-08-12",
+  "authorizedAt": "2026-08-12T19:40:00Z",
+  "authorization": {
+    "type": "user_scope_change_condition_5",
+    "summary": "User authorized Apify Google review backfill for sewer-specific classification and public sewer-review UI."
+  },
+  "status": "permitted",
+  "policyNote": "Discovery + website/Census-backed directory fields permitted. User authorized Apify review backfill (condition 5 scope change) for ephemeral raw review processing and durable sewer-derived counts/tags only. Raw review text is not retained beyond retentionHours. Overall Google AggregateRating remains blocked. Public sewer-review badge uses sewer-specific counts only.",
+  "sources": {
+    "apify_maps_discovery": {
+      "actor": "compass/crawler-google-places",
+      "role": "candidate_discovery_only",
+      "url": "https://apify.com/compass/crawler-google-places",
+      "grantsContentLicense": false
+    },
+    "apify_review_backfill": {
+      "actor": "compass/crawler-google-places",
+      "role": "ephemeral_review_fetch_user_authorized",
+      "url": "https://apify.com/compass/crawler-google-places",
+      "grantsContentLicense": "user_authorized_scope_change_2026-08-12"
+    },
+    "contractor_website": {
+      "role": "publishable_identity_and_evidence",
+      "grantsContentLicense": true
+    },
+    "census_geocoder": {
+      "role": "persistable_coordinates",
+      "url": "https://geocoding.geo.census.gov/geocoder/",
+      "grantsContentLicense": true
+    },
+    "google_places_api": {
+      "role": "not_configured",
+      "url": "https://developers.google.com/maps/documentation/places/web-service/policies",
+      "grantsContentLicense": false
+    }
+  },
+  "fields": {
+    "placeId": {
+      "persist": true,
+      "display": false,
+      "source": "apify_maps_discovery",
+      "notes": "Opaque Place ID for dedupe and review backfill targeting"
+    },
+    "businessIdentity": {
+      "persist": true,
+      "display": true,
+      "source": "contractor_website",
+      "notes": "Publish only after website or official-registry recapture"
+    },
+    "coordinates": {
+      "persist": true,
+      "display": true,
+      "source": "census_geocoder",
+      "notes": "Never persist Google Maps coordinates into site JSON"
+    },
+    "overallRating": {
+      "persist": false,
+      "display": false,
+      "source": "none",
+      "notes": "No AggregateRating JSON-LD; overall star rating not published"
+    },
+    "overallReviewCount": {
+      "persist": true,
+      "display": true,
+      "source": "apify_maps_discovery",
+      "notes": "Overall Google review count may display as context; never relabel as sewer reviews"
+    },
+    "rawReviewText": {
+      "persist": false,
+      "display": false,
+      "source": "apify_review_backfill",
+      "notes": "Ephemeral only; delete within retentionHours after classification"
+    },
+    "sewerReviewClassification": {
+      "persist": true,
+      "display": true,
+      "source": "apify_review_backfill",
+      "notes": "Derived tags/lanes from sewer-specific review text; user-authorized Apify path"
+    },
+    "sewerReviewCount": {
+      "persist": true,
+      "display": true,
+      "source": "apify_review_backfill",
+      "notes": "Public badge shows N sewer review(s) only; user-authorized Apify path"
+    },
+    "reviewSummary": {
+      "persist": true,
+      "display": true,
+      "source": "flash_from_derived",
+      "notes": "Flash may summarize sewer-derived evidence; do not paste raw Google review text"
+    },
+    "reviewExcerpt": {
+      "persist": false,
+      "display": false,
+      "source": "none",
+      "notes": "No verbatim Google review excerpts in the public site"
+    }
+  },
+  "reviewOperations": {
+    "apifyReviewBackfill": "permitted",
+    "placesApiEphemeralClassify": "not_configured",
+    "publicSewerReviewBadge": "permitted",
+    "publicOverallGoogleRating": "blocked"
+  },
+  "rawArtifactRetentionHours": 24,
+  "attributionRequired": true,
+  "attributionNote": "When sewer-review counts are shown, disclose website/review research and do not imply Google endorsement. Never emit AggregateRating/Review JSON-LD for third-party Google reviews."
+}

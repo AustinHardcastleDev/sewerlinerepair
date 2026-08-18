@@ -1,0 +1,47 @@
+# SewerLineRepairList.com
+
+> SewerLineRepairList is a buyer-first directory of sewer line repair contractors across 50 US states. We filter the noise across plumbers, drain cleaners, and sewer specialists so buyers can find someone whose website shows residential lateral repair, trenchless lining, pipe bursting, or excavation work. Listings are sorted by website signal: dedicated sewer page, repeated mentions, or at least one clear mention worth a first call. Independent. Not a broker. Not an endorsement.
+
+## Coverage
+
+- Full interactive directory for all 50 states at /contractors/{state-slug}.
+- Unique state market notes cover soil/tree pressure, lateral responsibility norms, permitting hooks, and licensing notes from internal research.
+- ZIP near-me search, metro pages, method/tag pages, and contractor profiles.
+- Contractor profile copy is generated with Gemini Flash from website signal and sewer-filtered review themes (when authorized).
+
+## Primary entry points
+
+- [Home](https://www.sewerlinerepairlist.com/): national overview and method
+- [Contractors by state](https://www.sewerlinerepairlist.com/contractors): 50-state index
+- [Sewer line repair near me](https://www.sewerlinerepairlist.com/contractors/near-me): ZIP search against listing coordinates
+- [Buyer guides](https://www.sewerlinerepairlist.com/guides): cost, methods, process, permits, hiring
+- [About](https://www.sewerlinerepairlist.com/about): how the research works
+- [For contractors](https://www.sewerlinerepairlist.com/for-contractors): corrections, additions, removals
+- [Contact](https://www.sewerlinerepairlist.com/contact): buyer and contractor questions
+- [Privacy](https://www.sewerlinerepairlist.com/privacy): analytics and data practices
+
+## Buyer guides
+
+- [Sewer line repair cost](https://www.sewerlinerepairlist.com/guides/sewer-line-repair-cost)
+- [Repair vs replacement](https://www.sewerlinerepairlist.com/guides/sewer-line-repair-vs-replacement)
+- [Trenchless vs excavation](https://www.sewerlinerepairlist.com/guides/trenchless-vs-excavation)
+- [Pipe lining vs pipe bursting](https://www.sewerlinerepairlist.com/guides/pipe-lining-vs-pipe-bursting)
+- [Sewer line repair process](https://www.sewerlinerepairlist.com/guides/sewer-line-repair-process)
+- [Questions to ask a sewer contractor](https://www.sewerlinerepairlist.com/guides/questions-to-ask-sewer-contractor)
+- [Camera inspection explained](https://www.sewerlinerepairlist.com/guides/sewer-camera-inspection-explained)
+- [Permits and right-of-way](https://www.sewerlinerepairlist.com/guides/sewer-line-permits-and-right-of-way)
+- [Who is responsible for the lateral](https://www.sewerlinerepairlist.com/guides/who-is-responsible-for-sewer-lateral)
+- [Insurance and sewer backup](https://www.sewerlinerepairlist.com/guides/insurance-and-sewer-backup)
+
+## Method / topic tag pages
+
+Tag pages live at /contractors/tags/{tag-slug}. Full enumeration is in the sitemap (/sitemap.xml).
+
+## Metro pages
+
+Metro pages live at /contractors/{state-slug}/metros/{metro-slug}. Qualifying metros are listed on each state hub.
+
+## Notes
+
+- Website signal is a starting filter, not a license or insurance verification.
+- Sewer-specific review counts are shown when permitted. Overall Google star ratings are not displayed.

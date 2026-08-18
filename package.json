@@ -1,0 +1,37 @@
+{
+  "name": "sewerlinerepairlist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "audit:data": "node scripts/audit-data.mjs",
+    "audit:copy": "node scripts/audit-generated-copy.mjs",
+    "audit:sitemap": "node scripts/audit-sitemap.mjs",
+    "smoke": "node scripts/smoke-crawl.mjs",
+    "rotate:discovery": "node scripts/rotate-homepage-discovery.mjs",
+    "editorial:states": "node scripts/generate-state-editorial.mjs",
+    "editorial:metros": "node scripts/generate-metro-editorial.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "next": "^15.5.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.10"
+  }
+}
