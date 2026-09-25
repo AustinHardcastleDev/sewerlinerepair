@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { BreadcrumbListJsonLd, BreadcrumbNav } from './Breadcrumbs'
 import { FAQ, type FAQItem } from './FAQ'
 import { ButtonLink } from './Button'
+import { relatedDirectoryLinks, relatedGuides } from '@/lib/guides'
 import { LIST_BASE } from '@/lib/site'
 import {
   DEFAULT_GUIDE_SOURCES,
@@ -41,6 +42,8 @@ export function GuideLayout({
     slug,
     sources,
   })
+  const moreGuides = relatedGuides(slug)
+  const directoryLinks = relatedDirectoryLinks(slug)
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-10">
@@ -85,6 +88,28 @@ export function GuideLayout({
           ))}
         </ul>
       </aside>
+
+      {moreGuides.length > 0 || directoryLinks.length > 0 ? (
+        <aside className="mt-12">
+          <h2 className="t-heading text-[22px]">Keep reading</h2>
+          <ul className="mt-4 space-y-2 text-[16px]">
+            {moreGuides.map((guide) => (
+              <li key={guide.slug}>
+                <Link href={`/guides/${guide.slug}`} className="link">
+                  {guide.title}
+                </Link>
+              </li>
+            ))}
+            {directoryLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="link">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
 
       <div className="mt-12 rounded-card border border-[var(--color-ink)] bg-[var(--color-panel)] p-6">
         <h2 className="t-heading">Ready to find who to call?</h2>

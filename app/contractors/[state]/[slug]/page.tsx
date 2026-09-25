@@ -21,7 +21,7 @@ import {
   getProfileSeoTitle,
 } from '@/lib/profile-copy'
 import { FAQ, type FAQItem } from '@/components/FAQ'
-import { pageMetadata, seoDescription, seoTitle } from '@/lib/seo'
+import { directoryProfileEntity, pageMetadata, seoDescription, seoTitle } from '@/lib/seo'
 import { BreadcrumbListJsonLd, BreadcrumbNav } from '@/components/Breadcrumbs'
 import { ContractorCard, ConfidenceBadge } from '@/components/ContractorCard'
 import { SewerReviewsBadge } from '@/components/SewerReviewsBadge'
@@ -360,13 +360,15 @@ function LocalBusinessJsonLd({
   description: string
 }) {
   const profileUrl = `${SITE_URL}${LIST_BASE}/${contractor.stateSlug}/${contractor.slug}`
+  const entity = directoryProfileEntity(profileUrl, contractor.website)
   const json: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${profileUrl}#business`,
     name: contractor.name,
     description,
-    url: contractor.website || profileUrl,
+    url: entity.url,
+    mainEntityOfPage: profileUrl,
     telephone: contractor.phone || undefined,
     isPartOf: {
       '@type': 'WebSite',
@@ -382,7 +384,13 @@ function LocalBusinessJsonLd({
       addressCountry: 'US',
     },
   }
-  if (contractor.website) json.sameAs = contractor.website
+  if (entity.sameAs) json.sameAs = entity.sameAs
+  if (contractor.city) {
+    json.areaServed = {
+      '@type': 'City',
+      name: `${contractor.city}, ${contractor.stateAbbr}`,
+    }
+  }
   if (contractor.lat != null && contractor.lng != null) {
     json.geo = {
       '@type': 'GeoCoordinates',

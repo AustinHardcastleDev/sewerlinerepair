@@ -11,7 +11,7 @@
 
 ## Primary entry points
 
-- [Home](https://www.sewerlinerepairlist.com/): national overview and method
+- [Home](https://www.sewerlinerepairlist.com/): sewer line repair contractors, national overview
 - [Contractors by state](https://www.sewerlinerepairlist.com/contractors): 50-state index
 - [Sewer line repair near me](https://www.sewerlinerepairlist.com/contractors/near-me): ZIP search against listing coordinates
 - [Buyer guides](https://www.sewerlinerepairlist.com/guides): cost, methods, process, permits, hiring
@@ -35,7 +35,13 @@
 
 ## Method / topic tag pages
 
-Tag pages live at /contractors/tags/{tag-slug}. Full enumeration is in the sitemap (/sitemap.xml).
+- [Trenchless sewer repair](https://www.sewerlinerepairlist.com/contractors/tags/trenchless)
+- [CIPP lining](https://www.sewerlinerepairlist.com/contractors/tags/cipp)
+- [Pipe bursting](https://www.sewerlinerepairlist.com/contractors/tags/pipe-bursting)
+- [Open-cut excavation](https://www.sewerlinerepairlist.com/contractors/tags/open-cut)
+- [Sewer backup emergency](https://www.sewerlinerepairlist.com/contractors/tags/emergency-backup)
+
+State method pages live at /contractors/{state-slug}/tags/{tag-slug}. Full enumeration is in the sitemap (/sitemap.xml).
 
 ## Metro pages
 

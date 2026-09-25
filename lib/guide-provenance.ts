@@ -1,5 +1,5 @@
 import { SITE } from './site'
-import { absoluteUrl } from './seo'
+import { OG_IMAGE, absoluteUrl } from './seo'
 
 /** Shared editorial provenance for buyer guides. */
 export const GUIDE_REVIEWED_LABEL = 'Reviewed August 13, 2026'
@@ -79,11 +79,16 @@ export function guideArticleJsonLd({
       name: GUIDE_AUTHOR.name,
       url: absoluteUrl(GUIDE_AUTHOR.url),
     },
+    image: absoluteUrl(OG_IMAGE.url),
     publisher: {
       '@type': 'Organization',
       '@id': absoluteUrl('/#organization'),
       name: SITE.name,
       url: absoluteUrl('/'),
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl(OG_IMAGE.url),
+      },
     },
     citation: sources.map((source) => source.href),
   }

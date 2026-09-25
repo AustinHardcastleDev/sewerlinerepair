@@ -8,9 +8,9 @@ import {
 } from '@/lib/guide-provenance'
 
 export const metadata = pageMetadata({
-  title: 'Trenchless vs excavation',
+  title: 'Trenchless Sewer Repair vs Excavation',
   description:
-    'Lining and pipe bursting are powerful tools, not universal substitutes for open-cut excavation.',
+    'Trenchless sewer repair fits when the host pipe cooperates. Open-cut excavation is the honest answer for collapses, grade changes, and bad access.',
   path: '/guides/trenchless-vs-excavation',
   type: 'article',
 })
@@ -40,8 +40,8 @@ export default function Page() {
   return (
     <GuideLayout
       eyebrow="Methods"
-      title="Trenchless vs excavation"
-      lead="Lining and pipe bursting are powerful tools, not universal substitutes for open-cut excavation."
+      title="Trenchless sewer repair vs excavation"
+      lead="Trenchless sewer repair fits when the host pipe cooperates. Open-cut is the honest answer for collapses, grade changes, and bad access."
       faqs={FAQS}
       slug="trenchless-vs-excavation"
       sources={SOURCES}

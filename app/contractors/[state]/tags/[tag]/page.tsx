@@ -21,7 +21,8 @@ import {
   TOTAL_INSTALLERS,
 } from '@/lib/contractors'
 import { FAQ } from '@/components/FAQ'
-import { pageMetadata } from '@/lib/seo'
+import { collectionItemList, pageMetadata } from '@/lib/seo'
+import { DIRECTORY_LIST_PREVIEW_LIMIT } from '@/lib/tag-seo'
 import { ContractorDotMap } from '@/components/ContractorDotMap'
 import { FilteredContractors } from '@/components/FilteredContractors'
 import { ContractorLinkList } from '@/components/ContractorLinkList'
@@ -68,7 +69,12 @@ export default async function StateDirectoryTagPage({ params }: Props) {
 
   return (
     <>
-      <StateTagJsonLd state={s} tag={tag} count={matches.length} />
+      <StateTagJsonLd
+        state={s}
+        tag={tag}
+        count={matches.length}
+        preview={matches.slice(0, DIRECTORY_LIST_PREVIEW_LIMIT)}
+      />
       <BreadcrumbListJsonLd
         items={[
           { label: 'Home', href: '/' },
@@ -160,10 +166,12 @@ function StateTagJsonLd({
   state,
   tag,
   count,
+  preview,
 }: {
   state: { name: string; slug: string }
   tag: { label: string; slug: string; shortLabel: string }
   count: number
+  preview: { name: string; stateSlug: string; slug: string }[]
 }) {
   const json = {
     '@context': 'https://schema.org',
@@ -171,10 +179,11 @@ function StateTagJsonLd({
     name:
       tag.slug === 'cipp'
         ? `${state.name} CIPP lining contractors`
-        : `${state.name} sewer contractors: ${tag.label}`,
+        : `${state.name} sewer line repair: ${tag.label}`,
     description: `${count} researched contractors in ${state.name} matching ${tag.shortLabel}.`,
     url: `${SITE_URL}${LIST_BASE}/${state.slug}/tags/${tag.slug}`,
-    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE_URL },
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE.name, url: SITE_URL },
+    mainEntity: collectionItemList(preview),
     about: {
       '@type': 'Thing',
       name:

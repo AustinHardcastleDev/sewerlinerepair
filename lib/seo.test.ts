@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { seoDescription, seoTitle, truncateText } from './seo'
+import { collectionItemList, directoryProfileEntity, seoDescription, seoTitle, truncateText } from './seo'
+import { getTagSeoTitle } from './tag-seo'
 import { getProfileSeoTitle } from './profile-copy'
 import type { Contractor } from './contractor-model'
 
@@ -20,6 +21,42 @@ describe('seo helpers', () => {
     const out = seoDescription(long)
     expect(out.length).toBeLessThanOrEqual(155)
     expect(out.endsWith('…') || out.length <= 155).toBe(true)
+  })
+})
+
+describe('directory and tag SEO', () => {
+  it('keeps the directory profile as the entity URL', () => {
+    expect(
+      directoryProfileEntity('https://www.sewerlinerepairlist.com/contractors/tx/acme', 'https://acme.example'),
+    ).toEqual({
+      url: 'https://www.sewerlinerepairlist.com/contractors/tx/acme',
+      sameAs: 'https://acme.example',
+    })
+    expect(directoryProfileEntity('https://example.com/p', '  ')).toEqual({
+      url: 'https://example.com/p',
+    })
+  })
+
+  it('builds an item list only from the supplied contractors', () => {
+    const list = collectionItemList([
+      { name: 'Acme', stateSlug: 'tx', slug: 'acme' },
+    ])
+    expect(list.numberOfItems).toBe(1)
+    expect(list.itemListElement[0]?.url).toContain('/contractors/tx/acme')
+  })
+
+  it('title-cases pipe bursting method titles', () => {
+    expect(
+      getTagSeoTitle(
+        {
+          slug: 'pipe-bursting',
+          label: 'Pipe bursting',
+          shortLabel: 'Pipe bursting',
+          description: 'Bursting signal',
+        },
+        12,
+      ),
+    ).toBe('Pipe Bursting Sewer Repair')
   })
 })
 

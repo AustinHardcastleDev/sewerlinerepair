@@ -119,7 +119,7 @@ export default async function NearMePage({ searchParams }: Props) {
         items={[
           { label: 'Home', href: '/' },
           { label: 'Contractors', href: LIST_BASE },
-          { label: 'Near me' },
+          { label: 'Near me', href: `${LIST_BASE}/near-me` },
         ]}
       />
       <article className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 md:pt-20 lg:px-10">

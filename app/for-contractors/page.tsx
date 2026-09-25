@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { ContactForm } from '@/components/ContactForm'
 import { TOTAL_INSTALLERS, TOTAL_STATES } from '@/lib/contractors'
+import { BreadcrumbListJsonLd, BreadcrumbNav } from '@/components/Breadcrumbs'
 import { pageMetadata } from '@/lib/seo'
 import { SITE } from '@/lib/site'
 
@@ -10,16 +10,16 @@ export const metadata = pageMetadata({
   path: '/for-contractors',
 })
 
+const CRUMBS = [
+  { label: 'Home', href: '/' },
+  { label: 'For Contractors', href: '/for-contractors' },
+]
+
 export default function ForContractorsPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-10">
-      <nav className="meta meta-soft mt-4 break-words">
-        <Link href="/" className="hover:text-[var(--color-ink)]">
-          Home
-        </Link>
-        <span className="mx-2 text-[var(--color-border)]">/</span>
-        <span className="text-[var(--color-ink)]">For Contractors</span>
-      </nav>
+      <BreadcrumbListJsonLd items={CRUMBS} />
+      <BreadcrumbNav items={CRUMBS} />
 
       <span className="eyebrow mt-8">A note to contractors</span>
       <h1 className="t-display mt-4">

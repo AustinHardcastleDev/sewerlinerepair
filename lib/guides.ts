@@ -29,7 +29,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'trenchless-vs-excavation',
-    title: 'Trenchless vs excavation',
+    title: 'Trenchless sewer repair vs excavation',
     description:
       'When CIPP lining or pipe bursting fits, when open-cut is the honest answer, and why lining and bursting are not universal substitutes for excavation.',
     eyebrow: 'Methods',
@@ -56,7 +56,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'pipe-lining-vs-pipe-bursting',
-    title: 'Pipe lining vs pipe bursting',
+    title: 'CIPP lining vs pipe bursting',
     description:
       'How CIPP and bursting differ, when each fails, and what cleanouts, host-pipe condition, and access change.',
     eyebrow: 'Trenchless',
@@ -103,4 +103,106 @@ export const GUIDES: GuideMeta[] = [
 
 export function getGuide(slug: string): GuideMeta | undefined {
   return GUIDES.find((guide) => guide.slug === slug)
+}
+
+const RELATED_GUIDES: Record<string, string[]> = {
+  'sewer-line-repair-cost': [
+    'sewer-line-repair-vs-replacement',
+    'trenchless-vs-excavation',
+    'insurance-and-sewer-backup',
+  ],
+  'sewer-line-repair-vs-replacement': [
+    'sewer-line-repair-cost',
+    'pipe-lining-vs-pipe-bursting',
+    'sewer-camera-inspection-explained',
+  ],
+  'trenchless-vs-excavation': [
+    'pipe-lining-vs-pipe-bursting',
+    'sewer-line-repair-vs-replacement',
+    'sewer-line-repair-cost',
+  ],
+  'questions-to-ask-sewer-contractor': [
+    'sewer-line-repair-process',
+    'who-is-responsible-for-sewer-lateral',
+    'sewer-line-permits-and-right-of-way',
+  ],
+  'sewer-line-repair-process': [
+    'sewer-camera-inspection-explained',
+    'sewer-line-permits-and-right-of-way',
+    'questions-to-ask-sewer-contractor',
+  ],
+  'pipe-lining-vs-pipe-bursting': [
+    'trenchless-vs-excavation',
+    'sewer-line-repair-vs-replacement',
+    'sewer-line-repair-cost',
+  ],
+  'sewer-line-permits-and-right-of-way': [
+    'who-is-responsible-for-sewer-lateral',
+    'sewer-line-repair-process',
+    'questions-to-ask-sewer-contractor',
+  ],
+  'sewer-camera-inspection-explained': [
+    'sewer-line-repair-process',
+    'sewer-line-repair-vs-replacement',
+    'questions-to-ask-sewer-contractor',
+  ],
+  'who-is-responsible-for-sewer-lateral': [
+    'sewer-line-permits-and-right-of-way',
+    'insurance-and-sewer-backup',
+    'questions-to-ask-sewer-contractor',
+  ],
+  'insurance-and-sewer-backup': [
+    'sewer-line-repair-cost',
+    'who-is-responsible-for-sewer-lateral',
+    'questions-to-ask-sewer-contractor',
+  ],
+}
+
+const RELATED_DIRECTORY: Record<string, { href: string; label: string }[]> = {
+  'sewer-line-repair-cost': [
+    { href: '/contractors/near-me', label: 'Sewer line repair near me' },
+    { href: '/contractors', label: 'Sewer line repair by state' },
+  ],
+  'sewer-line-repair-vs-replacement': [
+    { href: '/contractors/tags/pipe-bursting', label: 'Pipe bursting contractors' },
+    { href: '/contractors/tags/open-cut', label: 'Open-cut excavation contractors' },
+  ],
+  'trenchless-vs-excavation': [
+    { href: '/contractors/tags/trenchless', label: 'Trenchless sewer contractors' },
+    { href: '/contractors/tags/open-cut', label: 'Open-cut excavation contractors' },
+  ],
+  'pipe-lining-vs-pipe-bursting': [
+    { href: '/contractors/tags/cipp', label: 'CIPP lining contractors' },
+    { href: '/contractors/tags/pipe-bursting', label: 'Pipe bursting contractors' },
+  ],
+  'questions-to-ask-sewer-contractor': [
+    { href: '/contractors/near-me', label: 'Sewer line repair near me' },
+  ],
+  'sewer-line-repair-process': [
+    { href: '/contractors', label: 'Browse contractors by state' },
+  ],
+  'sewer-camera-inspection-explained': [
+    { href: '/contractors/near-me', label: 'Find contractors near me' },
+  ],
+  'sewer-line-permits-and-right-of-way': [
+    { href: '/contractors', label: 'Sewer line repair by state' },
+  ],
+  'who-is-responsible-for-sewer-lateral': [
+    { href: '/contractors', label: 'Sewer line repair by state' },
+  ],
+  'insurance-and-sewer-backup': [
+    { href: '/contractors/tags/emergency-backup', label: 'Sewer backup emergency contractors' },
+  ],
+}
+
+export function relatedGuides(slug: string): GuideMeta[] {
+  return (RELATED_GUIDES[slug] ?? [])
+    .map((item) => getGuide(item))
+    .filter((guide): guide is GuideMeta => Boolean(guide))
+}
+
+export function relatedDirectoryLinks(
+  slug: string,
+): { href: string; label: string }[] {
+  return RELATED_DIRECTORY[slug] ?? []
 }

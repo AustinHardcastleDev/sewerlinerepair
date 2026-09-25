@@ -25,7 +25,7 @@ import {
   DIRECTORY_MAP_PREVIEW_LIMIT,
 } from '@/lib/tag-seo'
 import { FAQ, type FAQItem } from '@/components/FAQ'
-import { pageMetadata } from '@/lib/seo'
+import { collectionItemList, pageMetadata } from '@/lib/seo'
 import { ContractorDotMap } from '@/components/ContractorDotMap'
 import { ZipSearchForm } from '@/components/ZipSearchForm'
 import { FilteredContractors } from '@/components/FilteredContractors'
@@ -102,13 +102,16 @@ export default async function MetroPage({ params }: Props) {
 
   return (
     <>
-      <MetroCollectionJsonLd metro={m} count={nearby.length} />
+      <MetroCollectionJsonLd metro={m} count={nearby.length} preview={cardPreview} />
       <BreadcrumbListJsonLd
         items={[
           { label: 'Home', href: '/' },
           { label: 'Contractors', href: LIST_BASE },
           { label: s?.name || m.state, href: `${LIST_BASE}/${m.stateSlug}` },
-          { label: `Near ${m.name}` },
+          {
+            label: `Near ${m.name}`,
+            href: `${LIST_BASE}/${m.stateSlug}/metros/${m.slug}`,
+          },
         ]}
       />
 
@@ -239,6 +242,7 @@ export default async function MetroPage({ params }: Props) {
 function MetroCollectionJsonLd({
   metro,
   count,
+  preview,
 }: {
   metro: {
     name: string
@@ -249,6 +253,7 @@ function MetroCollectionJsonLd({
     lng: number
   }
   count: number
+  preview: { name: string; stateSlug: string; slug: string }[]
 }) {
   const json = {
     '@context': 'https://schema.org',
@@ -256,7 +261,8 @@ function MetroCollectionJsonLd({
     name: `Sewer line repair near ${metro.name}, ${metro.stateAbbr}`,
     description: `${count} researched contractors near ${metro.name}.`,
     url: `${SITE_URL}${LIST_BASE}/${metro.stateSlug}/metros/${metro.slug}`,
-    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE_URL },
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE.name, url: SITE_URL },
+    mainEntity: collectionItemList(preview),
     spatialCoverage: {
       '@type': 'Place',
       name: `${metro.name}, ${metro.stateAbbr}`,

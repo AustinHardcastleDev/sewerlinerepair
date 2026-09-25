@@ -1,24 +1,24 @@
-import Link from 'next/link'
 import { ContactForm } from '@/components/ContactForm'
+import { BreadcrumbListJsonLd, BreadcrumbNav } from '@/components/Breadcrumbs'
 import { pageMetadata } from '@/lib/seo'
 import { SITE } from '@/lib/site'
 
 export const metadata = pageMetadata({
-  title: `Contact ${SITE.name}`,
+  title: 'Contact the directory',
   description: `Send a contractor correction, listing suggestion, buyer question, or update request for ${SITE.name}.`,
   path: '/contact',
 })
 
+const CRUMBS = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact', href: '/contact' },
+]
+
 export default function ContactPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-10">
-      <nav className="meta meta-soft mt-4 break-words">
-        <Link href="/" className="hover:text-[var(--color-ink)]">
-          Home
-        </Link>
-        <span className="mx-2 text-[var(--color-border)]">/</span>
-        <span className="text-[var(--color-ink)]">Contact</span>
-      </nav>
+      <BreadcrumbListJsonLd items={CRUMBS} />
+      <BreadcrumbNav items={CRUMBS} />
 
       <span className="eyebrow mt-8">Reach us</span>
       <h1 className="t-display mt-4">

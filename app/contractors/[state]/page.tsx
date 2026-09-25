@@ -18,7 +18,7 @@ import {
   METRO_RADIUS_MILES,
 } from '@/lib/metros'
 import { FAQ, type FAQItem } from '@/components/FAQ'
-import { pageMetadata } from '@/lib/seo'
+import { collectionItemList, pageMetadata } from '@/lib/seo'
 import { ContractorDotMap } from '@/components/ContractorDotMap'
 import { ZipSearchForm } from '@/components/ZipSearchForm'
 import { FilteredContractors } from '@/components/FilteredContractors'
@@ -107,12 +107,12 @@ export default async function StatePage({ params }: Props) {
 
   return (
     <>
-      <StateCollectionJsonLd state={s} count={all.length} />
+      <StateCollectionJsonLd state={s} count={all.length} preview={cardPreview} />
       <BreadcrumbListJsonLd
         items={[
           { label: 'Home', href: '/' },
           { label: 'Contractors', href: LIST_BASE },
-          { label: s.name },
+          { label: s.name, href: `${LIST_BASE}/${s.slug}` },
         ]}
       />
 
@@ -325,21 +325,24 @@ export default async function StatePage({ params }: Props) {
 function StateCollectionJsonLd({
   state,
   count,
+  preview,
 }: {
   state: { name: string; slug: string }
   count: number
+  preview: { name: string; stateSlug: string; slug: string }[]
 }) {
   const json = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `Sewer repair contractors in ${state.name}`,
+    name: `Sewer line repair contractors in ${state.name}`,
     description: `A directory of ${count} sewer line contractors in ${state.name}, sorted by website signal.`,
     url: `${SITE_URL}${LIST_BASE}/${state.slug}`,
-    isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE_URL },
+    isPartOf: { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE.name, url: SITE_URL },
     about: {
       '@type': 'Thing',
-      name: `Sewer contractors in ${state.name}`,
+      name: `Sewer line repair in ${state.name}`,
     },
+    mainEntity: collectionItemList(preview),
   }
   return (
     <script

@@ -142,6 +142,38 @@ function SiteFooter() {
             </li>
             <li>
               <Link
+                href="/guides/trenchless-vs-excavation"
+                className="text-[var(--color-band-body)] transition-colors hover:text-white"
+              >
+                Trenchless vs excavation
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${LIST_BASE}/tags/trenchless`}
+                className="text-[var(--color-band-body)] transition-colors hover:text-white"
+              >
+                Trenchless contractors
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${LIST_BASE}/tags/cipp`}
+                className="text-[var(--color-band-body)] transition-colors hover:text-white"
+              >
+                CIPP lining
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`${LIST_BASE}/tags/pipe-bursting`}
+                className="text-[var(--color-band-body)] transition-colors hover:text-white"
+              >
+                Pipe bursting
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={`${LIST_BASE}/near-me`}
                 className="text-[var(--color-band-body)] transition-colors hover:text-white"
               >

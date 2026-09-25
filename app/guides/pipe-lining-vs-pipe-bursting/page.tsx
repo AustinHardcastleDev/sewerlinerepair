@@ -8,9 +8,9 @@ import {
 } from '@/lib/guide-provenance'
 
 export const metadata = pageMetadata({
-  title: 'Pipe lining vs pipe bursting',
+  title: 'CIPP Lining vs Pipe Bursting',
   description:
-    'CIPP lining renews the host from inside. Pipe bursting replaces the run by breaking the old pipe outward. They are not interchangeable.',
+    'CIPP pipe lining renews the host from inside. Pipe bursting replaces the sewer line by breaking the old pipe outward. They are not interchangeable.',
   path: '/guides/pipe-lining-vs-pipe-bursting',
   type: 'article',
 })
@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <GuideLayout
       eyebrow="Trenchless"
-      title="Pipe lining vs pipe bursting"
+      title="CIPP lining vs pipe bursting"
       lead="CIPP lining renews the host from inside. Pipe bursting replaces the run by breaking the old pipe outward. They are not interchangeable."
       faqs={FAQS}
       slug="pipe-lining-vs-pipe-bursting"

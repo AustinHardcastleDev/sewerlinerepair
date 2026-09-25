@@ -40,10 +40,10 @@ export function getTagSeoTitle(
   if (tag.slug === 'trenchless') {
     if (stateName) {
       return count > 0
-        ? `${count} Trenchless Contractors in ${stateName}`
-        : `Trenchless Contractors in ${stateName}`
+        ? `${count} Trenchless Sewer Contractors in ${stateName}`
+        : `Trenchless Sewer Contractors in ${stateName}`
     }
-    return 'Trenchless Sewer Contractors'
+    return 'Trenchless Sewer Repair Contractors'
   }
 
   if (tag.slug === 'emergency-backup' || tag.slug === 'sewer_backup_emergency') {
@@ -57,10 +57,17 @@ export function getTagSeoTitle(
 
   if (stateName) {
     return count > 0
-      ? `${count} ${tag.shortLabel} Contractors in ${stateName}`
-      : `${tag.shortLabel} Contractors in ${stateName}`
+      ? `${count} ${headingCase(tag.shortLabel)} Contractors in ${stateName}`
+      : `${headingCase(tag.shortLabel)} Contractors in ${stateName}`
   }
-  return `${tag.label} Sewer Repair`
+  return `${headingCase(tag.label)} Sewer Repair`
+}
+
+function headingCase(value: string): string {
+  return value
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
 }
 
 export function getTagMetaDescription(

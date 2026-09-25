@@ -22,7 +22,7 @@ import {
   TOTAL_INSTALLERS,
 } from '@/lib/contractors'
 import { FAQ } from '@/components/FAQ'
-import { pageMetadata } from '@/lib/seo'
+import { collectionItemList, pageMetadata } from '@/lib/seo'
 import { ContractorDotMap } from '@/components/ContractorDotMap'
 import { FilteredContractors } from '@/components/FilteredContractors'
 import { ContractorLinkList } from '@/components/ContractorLinkList'
@@ -244,16 +244,7 @@ function TagCollectionJsonLd({
           ? 'CIPP lining contractors'
           : `${tag.label} sewer line contractors`,
     },
-    mainEntity: {
-      '@type': 'ItemList',
-      numberOfItems: preview.length,
-      itemListElement: preview.map((contractor, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        url: `${SITE_URL}${LIST_BASE}/${contractor.stateSlug}/${contractor.slug}`,
-        name: contractor.name,
-      })),
-    },
+    mainEntity: collectionItemList(preview),
   }
   return (
     <script

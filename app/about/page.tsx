@@ -3,24 +3,25 @@ import { ContactForm } from '@/components/ContactForm'
 import { ButtonLink } from '@/components/Button'
 import { LIST_BASE, SITE } from '@/lib/site'
 import { TOTAL_INSTALLERS, TOTAL_STATES } from '@/lib/contractors'
+import { BreadcrumbListJsonLd, BreadcrumbNav } from '@/components/Breadcrumbs'
 import { pageMetadata } from '@/lib/seo'
 
 export const metadata = pageMetadata({
-  title: `About ${SITE.name}`,
+  title: 'About this directory',
   description: `How ${SITE.name} checks contractor websites for sewer line signal and builds a buyer-first directory across 50 states.`,
   path: '/about',
 })
 
+const CRUMBS = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+]
+
 export default function AboutPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-10">
-      <nav className="meta meta-soft mt-4 break-words">
-        <Link href="/" className="hover:text-[var(--color-ink)]">
-          Home
-        </Link>
-        <span className="mx-2 text-[var(--color-border)]">/</span>
-        <span className="text-[var(--color-ink)]">About</span>
-      </nav>
+      <BreadcrumbListJsonLd items={CRUMBS} />
+      <BreadcrumbNav items={CRUMBS} />
 
       <span className="eyebrow mt-8">How the work gets done</span>
       <h1 className="t-display mt-4">We did the contractor research.</h1>

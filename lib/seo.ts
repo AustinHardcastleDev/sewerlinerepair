@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE, SITE_URL } from './site'
+import { LIST_BASE, SITE, SITE_URL } from './site'
 
 const TITLE_LIMIT_BEFORE_BRAND = 50
 const DESCRIPTION_LIMIT = 155
@@ -35,6 +35,39 @@ export function seoTitle(value: string): string {
 
 export function seoDescription(value: string): string {
   return truncateText(value, DESCRIPTION_LIMIT)
+}
+
+export type CollectionListItem = {
+  name: string
+  stateSlug: string
+  slug: string
+}
+
+/** ItemList for contractors actually linked on the page, not the full extract. */
+export function collectionItemList(items: CollectionListItem[]) {
+  return {
+    '@type': 'ItemList' as const,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem' as const,
+      position: index + 1,
+      name: item.name,
+      url: absoluteUrl(`${LIST_BASE}/${item.stateSlug}/${item.slug}`),
+    })),
+  }
+}
+
+/**
+ * The directory profile is the entity URL. The contractor's own site
+ * belongs in sameAs so this page stays the canonical listing.
+ */
+export function directoryProfileEntity(
+  profileUrl: string,
+  website?: string | null,
+): { url: string; sameAs?: string } {
+  const site = website?.trim()
+  if (!site) return { url: profileUrl }
+  return { url: profileUrl, sameAs: site }
 }
 
 /**

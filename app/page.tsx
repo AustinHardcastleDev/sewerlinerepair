@@ -11,7 +11,7 @@ import {
 import { ContractorLinkList } from '@/components/ContractorLinkList'
 import { FAQ, type FAQItem } from '@/components/FAQ'
 import { LIST_BASE, SITE, SITE_URL } from '@/lib/site'
-import { pageMetadata } from '@/lib/seo'
+import { OG_IMAGE, absoluteUrl, pageMetadata } from '@/lib/seo'
 import { ZipSearchForm } from '@/components/ZipSearchForm'
 import { RepairCostCta } from '@/components/RepairCostCta'
 import { ButtonLink } from '@/components/Button'
@@ -26,8 +26,9 @@ import { intentTagCounts } from '@/lib/directory-tags'
 const discoverySample = getHomepageDiscoverySample()
 
 export const metadata = pageMetadata({
-  title: SITE.name,
-  description: SITE.description,
+  title: `Sewer Line Repair Contractors · ${SITE.name}`,
+  description:
+    'Compare sewer line repair contractors in 50 states, sorted by website signal instead of paid placement.',
   path: '/',
   absoluteTitle: true,
 })
@@ -357,6 +358,7 @@ function ClosingCta() {
 }
 
 function HomeJsonLd() {
+  const image = absoluteUrl(OG_IMAGE.url)
   const json = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -366,6 +368,15 @@ function HomeJsonLd() {
         name: SITE.name,
         url: SITE_URL,
         description: SITE.description,
+        image,
+        areaServed: { '@type': 'Country', name: 'United States' },
+        knowsAbout: [
+          'Sewer line repair',
+          'Trenchless sewer repair',
+          'CIPP lining',
+          'Pipe bursting',
+          'Residential sewer laterals',
+        ],
       },
       {
         '@type': 'WebSite',
@@ -374,6 +385,17 @@ function HomeJsonLd() {
         url: SITE_URL,
         description: SITE.description,
         publisher: { '@id': `${SITE_URL}/#organization` },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE_URL}/#webpage`,
+        url: SITE_URL,
+        name: 'Sewer Line Repair Contractors',
+        description:
+          'Compare sewer line repair contractors across 50 states by website signal.',
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        about: { '@id': `${SITE_URL}/#organization` },
+        primaryImageOfPage: image,
       },
     ],
   }
